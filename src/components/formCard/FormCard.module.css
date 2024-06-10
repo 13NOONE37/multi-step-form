@@ -1,0 +1,88 @@
+.container {
+  container-type: inline-size;
+}
+.input {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  opacity: 0;
+}
+
+.label {
+  cursor: pointer;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-color);
+  border-radius: 8px;
+
+  padding: 16px 20px 16px 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  grid-template-areas: 'icon' 'name' 'price' 'description';
+}
+.input:checked + .label {
+  border-color: var(--color-purple);
+}
+.input:focus-visible + .label {
+  outline: auto;
+}
+.label:hover {
+  border-color: var(--color-purple);
+}
+.icon {
+  grid-area: icon;
+}
+.name {
+  margin-top: 39px;
+  grid-area: name;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--color-denim);
+}
+.price {
+  margin-top: 7px;
+  grid-area: price;
+
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-grey);
+}
+.description {
+  margin-top: 6px;
+  grid-area: description;
+
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-denim);
+}
+
+@container (min-width: 180px) {
+  /* If container has minimum width of 180px we will display content inside horizontaly */
+  .label {
+    padding: 16px 16px 16px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 'icon name' 'icon price' '_ description';
+    place-items: start start;
+  }
+  .icon {
+    margin-right: 14px;
+  }
+  .name {
+    margin-top: unset;
+  }
+  .price {
+    margin-top: 7px;
+  }
+  .description {
+    margin-top: 3px;
+  }
+}

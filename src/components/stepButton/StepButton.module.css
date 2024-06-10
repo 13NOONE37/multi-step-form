@@ -1,0 +1,29 @@
+.button {
+  cursor: pointer;
+  width: 2.0625rem;
+  height: 2.0625rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+
+  color: var(--color-white);
+
+  display: grid;
+  place-items: center;
+}
+.button:disabled {
+  cursor: default;
+}
+.button span {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+.button__active {
+  background-color: var(--color-sky-blue);
+  border-color: var(--color-sky-blue);
+}
+.button__active span {
+  color: var(--color-denim);
+}

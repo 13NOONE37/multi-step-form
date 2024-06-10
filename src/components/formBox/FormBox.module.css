@@ -1,0 +1,319 @@
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+  height: 100%;
+}
+.progressContainer {
+  width: 100%;
+  height: 10.75rem;
+  padding: 2rem 0;
+
+  background-image: url('../../assets/images/bg-sidebar-mobile.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+}
+.stepContainer--stepIndicator,
+.stepContainer--stepName {
+  display: none;
+}
+.formContainer {
+  width: calc(100% - 1rem * 2);
+  justify-self: center;
+}
+.formBox {
+  background-color: var(--color-white);
+  border-radius: 0.625rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.0951);
+  transform: translateY(-4.5625rem);
+  container-type: inline-size;
+}
+.formBox--heading {
+  font-size: 24px;
+  line-height: 28px;
+  color: var(--color-denim);
+}
+.formBox--description {
+  margin-top: 9px;
+  color: var(--color-grey);
+}
+.controlsContainer {
+  position: fixed;
+  bottom: 0;
+
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0 25px 40px 20px rgba(0, 0, 0, 0.0951);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+.back {
+  grid-column: 1;
+}
+.next,
+.submit {
+  grid-column: 3;
+}
+.formOne {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.formTwo {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.formTwo--cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.formTwo--billingBar {
+  margin-top: 24px;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-very-light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.billingBar--name {
+  user-select: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-grey);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.billingBar--name__active {
+  color: var(--color-denim);
+}
+
+.formThree {
+  margin-top: 22px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.formFour {
+  margin-top: 22px;
+}
+.formFour--summaryBox {
+  padding: 24px 16px 24px 24px;
+
+  background-color: var(--color-very-light-grey);
+  border-radius: 8px;
+}
+
+.summaryBox--plan {
+  padding-bottom: 24px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: 'name price' 'button price';
+  place-items: center start;
+  gap: 7px 0;
+}
+
+.summaryBox--plan--name {
+  grid-area: name;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--color-denim);
+}
+.summaryBox--plan--price {
+  grid-area: price;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-denim);
+  justify-self: end;
+}
+.summaryBox--plan--button {
+  cursor: pointer;
+  grid-area: button;
+
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: var(--color-grey);
+  text-decoration: underline;
+}
+
+.summaryBox--addOns {
+  list-style-type: none;
+
+  border-top: 1px solid rgba(150, 153, 170, 0.243);
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.summaryBox--addOns li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.summaryBox--addOns--name {
+  color: var(--color-grey);
+}
+.summaryBox--addOns--price {
+  color: var(--color-denim);
+}
+.formFour--totalBox {
+  padding: 0 24px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.totalBox--description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: var(--color-grey);
+}
+.totalBox--price {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-purple);
+}
+@media screen and (min-width: 500px) {
+  .form {
+    margin-top: 40px;
+  }
+  .formOne {
+    gap: 24px;
+  }
+  .formTwo--cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .formTwo--billingBar {
+    margin-top: 32px;
+  }
+  .formThree {
+    gap: 16px;
+  }
+
+  .totalBox--price {
+    font-size: 20px;
+  }
+  .summaryBox--plan--name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .summaryBox--plan--price {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .container {
+    background-color: var(--color-white);
+    width: 940px;
+    height: 600px;
+    padding: 16px;
+
+    display: grid;
+    grid-template-columns: 274px 1fr;
+    grid-template-rows: 1fr 66px;
+    grid-template-areas: 'progress form' 'progress controls';
+    gap: 0 100px;
+
+    border-radius: 15px;
+    box-shadow: 0 25px 40px -20px rgba(0, 0, 0, 0.0951);
+  }
+  .progressContainer {
+    grid-area: progress;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 40px 32px;
+
+    background-image: url('../../assets/images/bg-sidebar-desktop.svg');
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 32px;
+  }
+  .stepContainer {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'button indicator' 'button name';
+    gap: 0 16px;
+  }
+  .stepContainer button {
+    grid-area: button;
+  }
+  .stepContainer--stepIndicator {
+    display: block;
+    grid-area: indicator;
+
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: var(--color-light-blue);
+
+    align-self: flex-start;
+  }
+  .stepContainer--stepName {
+    display: block;
+    grid-area: name;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-white);
+
+    align-self: flex-end;
+  }
+  .formContainer {
+    width: 100%;
+    grid-area: form;
+    padding-right: 84px;
+  }
+  .formBox {
+    transform: unset;
+    box-shadow: unset;
+    padding: unset;
+    padding-top: 40px;
+  }
+  .formBox--heading {
+  }
+  .formBox--description {
+    margin-top: 11px;
+  }
+  .controlsContainer {
+    position: static;
+    padding-right: 84px;
+    grid-area: controls;
+    box-shadow: unset;
+  }
+}
