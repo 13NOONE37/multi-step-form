@@ -1,0 +1,13 @@
+.form {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media screen and (min-width: 500px) {
+  .form {
+    margin-top: 40px;
+    gap: 24px;
+  }
+}

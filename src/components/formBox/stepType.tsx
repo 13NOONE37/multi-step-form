@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { FC } from 'react';
 import { FormValuesInterface } from './FormBox';
 import { FormikErrors, FormikTouched } from 'formik';
 
@@ -15,8 +15,9 @@ export interface renderContentInterface {
   ) => Promise<void | FormikErrors<FormValuesInterface>>;
 }
 export interface StepType {
+  path: string;
   heading: string;
   description: string;
   name: string;
-  renderContent: (props: renderContentInterface) => ReactNode;
+  Content: FC<renderContentInterface>;
 }

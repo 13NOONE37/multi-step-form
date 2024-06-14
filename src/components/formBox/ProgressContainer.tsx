@@ -7,7 +7,7 @@ interface ProgressContainerProps {
   steps: StepType[];
   currentStepIndex: number;
   goTo: (index: number) => void;
-  disabled: boolean;
+  disabled?: boolean;
 }
 
 const ProgressContainer: FC<ProgressContainerProps> = ({
@@ -20,7 +20,7 @@ const ProgressContainer: FC<ProgressContainerProps> = ({
     <div className={styles.progressContainer}>
       {steps.map((step, index) => {
         return (
-          <div className={styles.stepContainer}>
+          <div className={styles.stepContainer} key={index}>
             <StepButton
               currentStepIndex={currentStepIndex}
               index={index}

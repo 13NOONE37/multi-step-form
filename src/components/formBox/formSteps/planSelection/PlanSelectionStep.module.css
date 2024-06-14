@@ -1,0 +1,47 @@
+.form {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.form--cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form--billingBar {
+  margin-top: 24px;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: var(--color-very-light-grey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+.billingBar--name {
+  user-select: none;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-grey);
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.billingBar--name__active {
+  color: var(--color-denim);
+}
+
+@media screen and (min-width: 500px) {
+  .form {
+    margin-top: 40px;
+    gap: 24px;
+  }
+  .form--cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .form--billingBar {
+    margin-top: 32px;
+  }
+}

@@ -2,8 +2,6 @@ import { FC } from 'react';
 import { StepType } from './stepType';
 import styles from './FormBox.module.css';
 import ControlButton from '../controlButton/ControlButton';
-import { FormikErrors } from 'formik';
-import { FormValuesInterface } from './FormBox';
 
 interface ControlsContainerProps {
   steps: StepType[];
@@ -11,7 +9,7 @@ interface ControlsContainerProps {
   back: () => void;
   next: () => void;
   isSubmitting: boolean;
-  disabled: boolean;
+  onClickSubmit?: () => void;
 }
 
 const ControlsContainer: FC<ControlsContainerProps> = ({
@@ -20,7 +18,7 @@ const ControlsContainer: FC<ControlsContainerProps> = ({
   back,
   next,
   isSubmitting,
-  disabled,
+  onClickSubmit = () => {},
 }) => {
   return (
     <div className={styles.controlsContainer}>
@@ -35,11 +33,12 @@ const ControlsContainer: FC<ControlsContainerProps> = ({
       )}
       {currentStepIndex === steps.length - 1 ? (
         <ControlButton
-          onClick={() => {}}
+          onClick={onClickSubmit}
           className={styles.submit}
           type={'submit'}
           variant={'submit'}
           disabled={isSubmitting}
+          key={'stepButton'}
         >
           Confirm
         </ControlButton>
@@ -48,7 +47,7 @@ const ControlsContainer: FC<ControlsContainerProps> = ({
           onClick={next}
           className={styles.next}
           variant={'primary'}
-          disabled={disabled}
+          key={'submitButton'}
         >
           Next Step
         </ControlButton>

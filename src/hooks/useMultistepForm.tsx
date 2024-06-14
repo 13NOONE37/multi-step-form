@@ -1,8 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { StepType } from '../components/formBox/stepType';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export function useMultistepForm(steps: StepType[]) {
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const currentPathIndex = steps.findIndex(
+    ({ path }) => path === location.pathname,
+  );
+  const [currentStepIndex, setCurrentStepIndex] = useState(
+    currentPathIndex !== -1 ? currentPathIndex : 0,
+  );
+
+  useEffect(() => {
+    navigate(steps[currentStepIndex].path);
+  }, [currentStepIndex]);
 
   function next() {
     setCurrentStepIndex((i) => {
@@ -19,6 +32,7 @@ export function useMultistepForm(steps: StepType[]) {
   }
 
   function goTo(index: number) {
+    if (index < 0 || index > steps.length - 1) return;
     setCurrentStepIndex(index);
   }
 
