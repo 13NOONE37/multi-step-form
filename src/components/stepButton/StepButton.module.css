@@ -4,7 +4,7 @@
   height: 2.0625rem;
   border-radius: 50%;
   background-color: transparent;
-  border: 1px solid var(--color-white);
+  border: 0.0625rem solid var(--color-white);
 
   color: var(--color-white);
 

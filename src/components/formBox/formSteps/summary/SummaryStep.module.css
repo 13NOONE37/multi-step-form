@@ -1,36 +1,36 @@
 .form {
-  margin-top: 22px;
+  margin-top: 1.375rem;
 }
 .form--summaryBox {
-  padding: 24px 16px 24px 24px;
+  padding: 1.5rem 1rem 1.5rem 1.5rem;
 
   background-color: var(--color-very-light-grey);
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .summaryBox--plan {
-  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
 
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: auto auto;
   grid-template-areas: 'name price' 'button price';
   place-items: center start;
-  gap: 7px 0;
+  gap: 0.4375rem 0;
 }
 
 .summaryBox--plan--name {
   grid-area: name;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
-  line-height: 16px;
+  line-height: 1rem;
   color: var(--color-denim);
 }
 .summaryBox--plan--price {
   grid-area: price;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25rem;
   color: var(--color-denim);
   justify-self: end;
 }
@@ -40,8 +40,8 @@
 
   background-color: transparent;
   border: none;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   color: var(--color-grey);
   text-decoration: underline;
@@ -50,20 +50,20 @@
 .summaryBox--addOns {
   list-style-type: none;
 
-  border-top: 1px solid rgba(150, 153, 170, 0.243);
-  padding-top: 16px;
+  border-top: 0.0625rem solid rgba(150, 153, 170, 0.243);
+  padding-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 1rem;
 }
 .summaryBox--addOns li {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25rem;
 }
 .summaryBox--addOns--name {
   color: var(--color-grey);
@@ -72,37 +72,37 @@
   color: var(--color-denim);
 }
 .form--totalBox {
-  padding: 0 24px;
-  margin-top: 24px;
+  padding: 0 1.5rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .totalBox--description {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25rem;
   color: var(--color-grey);
 }
 .totalBox--price {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25rem;
   color: var(--color-purple);
 }
 @media screen and (min-width: 500px) {
   .form {
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 
   .totalBox--price {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   .summaryBox--plan--name {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
   }
   .summaryBox--plan--price {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }

@@ -14,10 +14,10 @@
 .label {
   cursor: pointer;
   background-color: var(--color-white);
-  border: 1px solid var(--color-border-color);
-  border-radius: 8px;
+  border: 0.0625rem solid var(--color-border-color);
+  border-radius: 0.5rem;
 
-  padding: 16px 20px 16px 16px;
+  padding: 1rem 1.25rem 1rem 1rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
@@ -36,29 +36,29 @@
   grid-area: icon;
 }
 .name {
-  margin-top: 39px;
+  margin-top: 2.4375rem;
   grid-area: name;
 
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 1rem;
+  line-height: 1.125rem;
   font-weight: 500;
   color: var(--color-denim);
 }
 .price {
-  margin-top: 7px;
+  margin-top: 0.4375rem;
   grid-area: price;
 
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
   font-weight: 400;
   color: var(--color-grey);
 }
 .description {
-  margin-top: 6px;
+  margin-top: 0.375rem;
   grid-area: description;
 
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
   font-weight: 400;
   color: var(--color-denim);
 }
@@ -66,7 +66,7 @@
 @container (min-width: 180px) {
   /* If container has minimum width of 180px we will display content inside horizontaly */
   .label {
-    padding: 16px 16px 16px 20px;
+    padding: 1rem 1rem 1rem 1.25rem;
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto auto;
@@ -74,15 +74,15 @@
     place-items: start start;
   }
   .icon {
-    margin-right: 14px;
+    margin-right: 0.875rem;
   }
   .name {
     margin-top: unset;
   }
   .price {
-    margin-top: 7px;
+    margin-top: 0.4375rem;
   }
   .description {
-    margin-top: 3px;
+    margin-top: 0.1875rem;
   }
 }
