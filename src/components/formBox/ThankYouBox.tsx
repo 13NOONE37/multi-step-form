@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 import styles from './FormBox.module.css';
-import ConfirmIcon from '../../assets/images/icon-thank-you.svg?react';
+import ConfirmIcon from '../../assets/images/IconThankYou';
 
 const ThankYouBox: FC = () => {
   return (

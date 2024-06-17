@@ -1,7 +1,7 @@
 import React, { FC, useId } from 'react';
 import cx from 'classnames';
 import styles from './FormCheckbox.module.css';
-import CheckIcon from '../../assets/images/icon-checkmark.svg?react';
+import CheckIcon from '../../assets/images/IconCheckmark';
 
 interface FormCheckboxProps {
   name: string;
@@ -43,6 +43,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
           checked={checked}
           onChange={onChange}
           onBlur={onBlur}
+          data-testid={value}
         />
         <div className={styles.check}>
           <CheckIcon />

@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import styles from './StepButton.module.css';
 import cx from 'classnames';
 interface StepButtonProps {

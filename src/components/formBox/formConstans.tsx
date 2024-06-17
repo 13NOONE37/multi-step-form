@@ -1,6 +1,6 @@
-import ArcadeIcon from '../../assets/images/icon-arcade.svg?react';
-import AdvancedIcon from '../../assets/images/icon-advanced.svg?react';
-import ProIcon from '../../assets/images/icon-pro.svg?react';
+import ArcadeIcon from '../../assets/images/IconArcade';
+import AdvancedIcon from '../../assets/images/IconAdvanced';
+import ProIcon from '../../assets/images/IconPro';
 
 export const YEARLY_FACTOR = 10; //it defines discount if user pays for whole year(for how many months he really pays)
 

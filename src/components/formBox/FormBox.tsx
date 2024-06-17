@@ -27,8 +27,8 @@ export interface FormValuesInterface {
   addOns: string[] | [];
 }
 
-const FORM_VALUES_LOCAL_STORAGE_KEY = 'multiStepFormValuesKey';
-const formInitalValues = {
+export const FORM_LOCAL_STORAGE_KEY = 'multiStepFormValuesKey';
+export const formInitalValues = {
   name: '',
   email: '',
   phone: '',
@@ -87,13 +87,14 @@ const FormBox: FC = () => {
     handleUpdateLocalStorageState,
     resetLocalStorageState,
   } = useLocalStorageState({
-    key: FORM_VALUES_LOCAL_STORAGE_KEY,
+    key: FORM_LOCAL_STORAGE_KEY,
     value: formInitalValues,
   });
 
   const [displayThankYou, setDisplayThankYou] = useState(false);
   const handleSubmit = (values: FormValuesInterface) => {
     console.log(values);
+
     resetLocalStorageState();
     setDisplayThankYou(true);
   };
@@ -140,7 +141,7 @@ const FormBox: FC = () => {
 
         return (
           <>
-            <Form className={styles.container}>
+            <Form className={styles.container} data-testid={'form'}>
               <ProgressContainer
                 steps={steps}
                 currentStepIndex={currentStepIndex}

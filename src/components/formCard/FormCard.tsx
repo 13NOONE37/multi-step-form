@@ -32,6 +32,7 @@ const FormCard: FC<FormCardProps> = ({
         onChange={onChange}
         className={styles.input}
         id={id}
+        data-testid={value}
       />
       <label htmlFor={id} className={styles.label}>
         {icon && <span className={styles.icon}>{icon}</span>}
