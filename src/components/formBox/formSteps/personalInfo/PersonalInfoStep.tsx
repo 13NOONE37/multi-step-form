@@ -22,6 +22,7 @@ const PersonalInfoStep: FC<renderContentInterface> = ({
         onBlur={handleBlur}
         error={errors.name}
         touched={touched.name}
+        focusOnRender={true}
       />
       <Input
         label={'Email Address'}

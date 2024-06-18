@@ -45,6 +45,13 @@
   font-weight: 400;
   color: var(--color-grey);
   text-decoration: underline;
+
+  transition: all 0.2s var(--transition-1);
+}
+@media (hover: hover) and (pointer: fine) {
+  .summaryBox--plan--button:hover {
+    color: var(--color-purple);
+  }
 }
 
 .summaryBox--addOns {

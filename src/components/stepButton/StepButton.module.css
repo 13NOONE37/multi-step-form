@@ -10,6 +10,7 @@
 
   display: grid;
   place-items: center;
+  transition: all 0.1s var(--transition-1);
 }
 .button:disabled {
   cursor: default;

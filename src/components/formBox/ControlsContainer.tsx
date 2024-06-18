@@ -39,6 +39,7 @@ const ControlsContainer: FC<ControlsContainerProps> = ({
           variant={'submit'}
           disabled={isSubmitting}
           key={'stepButton'}
+          focusOnRender
         >
           Confirm
         </ControlButton>

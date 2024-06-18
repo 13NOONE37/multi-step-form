@@ -7,7 +7,7 @@ import { ADD_ONS, ADD_ON_NAMES, YEARLY_FACTOR } from '../../formConstans';
 const AddOnsStep: FC<renderContentInterface> = ({ values, handleChange }) => {
   return (
     <div className={styles.form}>
-      {Object.values(ADD_ON_NAMES).map((addOnName) => {
+      {Object.values(ADD_ON_NAMES).map((addOnName, index) => {
         const { name, description, price } = ADD_ONS[addOnName];
 
         return (
@@ -24,6 +24,7 @@ const AddOnsStep: FC<renderContentInterface> = ({ values, handleChange }) => {
             value={addOnName}
             onChange={handleChange}
             name="addOns"
+            focusOnRender={index === 0}
           />
         );
       })}

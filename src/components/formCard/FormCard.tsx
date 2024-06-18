@@ -10,6 +10,7 @@ interface FormCardProps {
   cardName?: string;
   cardPrice?: string;
   cardDescription?: string;
+  focusOnRender?: boolean;
 }
 const FormCard: FC<FormCardProps> = ({
   icon = '',
@@ -20,8 +21,10 @@ const FormCard: FC<FormCardProps> = ({
   cardName = '',
   cardPrice = '',
   cardDescription = '',
+  focusOnRender = false,
 }) => {
   const id = useId();
+
   return (
     <div className={styles.container}>
       <input
@@ -32,6 +35,7 @@ const FormCard: FC<FormCardProps> = ({
         onChange={onChange}
         className={styles.input}
         id={id}
+        autoFocus={focusOnRender}
         data-testid={value}
       />
       <label htmlFor={id} className={styles.label}>

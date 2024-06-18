@@ -17,6 +17,13 @@
   border-radius: 0.5rem;
   background-color: var(--color-white);
   border: 0.0625rem solid var(--color-grey);
+  transition: all 0.2s var(--transition-1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .label:hover {
+    border-color: var(--color-purple);
+  }
 }
 .label:has(.input:focus-visible) {
   outline: auto;

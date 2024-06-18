@@ -19,7 +19,7 @@ const PlanSelectionStep: FC<renderContentInterface> = ({
   return (
     <div className={styles.form}>
       <div className={styles['form--cards']}>
-        {Object.values(PLAN_NAMES).map((plan_name) => {
+        {Object.values(PLAN_NAMES).map((plan_name, index) => {
           const { name, price, Icon } = PLANS[plan_name];
 
           return (
@@ -37,6 +37,7 @@ const PlanSelectionStep: FC<renderContentInterface> = ({
                   : `$${price}/mo`
               }
               cardDescription={values.isYearlyBilled ? '2 months free' : ''}
+              focusOnRender={index === 0}
             />
           );
         })}

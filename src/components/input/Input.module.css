@@ -19,14 +19,21 @@
   line-height: 1.0625rem;
   color: var(--color-denim);
   outline: none;
+  transition: all 0.2s var(--transition-1);
 }
 .input::placeholder {
   color: var(--color-grey);
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .input:hover {
+    border-color: var(--color-purple);
+  }
+}
 .input:not(.input__error):focus-visible {
   border-color: var(--color-purple);
 }
-.input__error {
+.input.input__error {
   border-color: var(--color-red-errors);
 }
 .label {

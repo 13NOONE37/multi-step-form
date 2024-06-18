@@ -12,6 +12,7 @@ interface FormCheckboxProps {
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   value: string;
+  focusOnRender?: boolean;
 }
 const FormCheckbox: FC<FormCheckboxProps> = ({
   name,
@@ -22,8 +23,10 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
   value,
   onChange,
   onBlur = () => {},
+  focusOnRender = false,
 }) => {
   const id = useId();
+
   return (
     <div
       className={cx(styles.container, {
@@ -43,6 +46,7 @@ const FormCheckbox: FC<FormCheckboxProps> = ({
           checked={checked}
           onChange={onChange}
           onBlur={onBlur}
+          autoFocus={focusOnRender}
           data-testid={value}
         />
         <div className={styles.check}>

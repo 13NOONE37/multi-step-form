@@ -13,7 +13,9 @@ interface InputProps {
   type?: 'text' | 'email' | 'number' | 'tel';
   error?: string;
   touched?: boolean;
+  focusOnRender?: boolean;
 }
+
 const Input: FC<InputProps> = ({
   label = '',
   name,
@@ -25,6 +27,7 @@ const Input: FC<InputProps> = ({
   type = 'text',
   error = '',
   touched = false,
+  focusOnRender = false,
 }) => {
   const id = useId();
 
@@ -45,6 +48,8 @@ const Input: FC<InputProps> = ({
         disabled={disabled}
         onChange={onChange}
         onBlur={onBlur}
+        id={id}
+        autoFocus={focusOnRender}
       />
     </div>
   );

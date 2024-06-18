@@ -22,6 +22,8 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto auto;
   grid-template-areas: 'icon' 'name' 'price' 'description';
+
+  transition: all 0.2s var(--transition-1);
 }
 .input:checked + .label {
   border-color: var(--color-purple);
