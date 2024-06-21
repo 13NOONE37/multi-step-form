@@ -31,8 +31,10 @@
 .input:focus-visible + .label {
   outline: auto;
 }
-.label:hover {
-  border-color: var(--color-purple);
+@media (hover: hover) and (pointer: fine) {
+  .label:hover {
+    border-color: var(--color-purple);
+  }
 }
 .icon {
   grid-area: icon;
